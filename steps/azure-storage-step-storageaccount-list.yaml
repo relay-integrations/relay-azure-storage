@@ -1,0 +1,12 @@
+apiVersion: integration/v1
+kind: Step
+name: azure-storage-step-account-list
+version: 1
+summary: Step template
+
+description: |
+  Lists Azure storage accounts
+
+build:
+  apiVersion: build/v1
+  kind: Docker
