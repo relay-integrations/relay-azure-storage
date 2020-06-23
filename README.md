@@ -8,7 +8,7 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [azure-storage-step-account-list](/steps/azure-storage-step-account-list)  | 
+| Step      | [azure-storage-step-storageaccount-list](/steps/azure-storage-step-storageaccount-list)  | 
 
 
 ## Contributing
