@@ -22,11 +22,11 @@ version: v20200408
 
 # The shortest possible accurate description of this integration. Required. May
 # just be the name of the service.
-summary: Azure Storage 
+summary: Azure Storage
 
 # A paragraph or two describing what this integration does. Optional. Markdown.
 description: |
-    Integration with Azure Storage
+    Azure Storage is a massively scalable data storage service. Azure handles hardware maintenance, updates, and critical issues for you.
 
 # License information. Optional. If not specified, this integration is assumed
 # to be unlicensed proprietary code. Otherwise, must be a valid SPDX License
@@ -46,3 +46,6 @@ homepage: https://github.com/relay-integrations/relay-azure-storage
 # URL to this integration's source code. Optional. If the homepage is a GitHub
 # link, may be inferred automatically.
 source: git://github.com/relay-integrations/relay-azure-storage.git
+
+tags:
+  - azure
