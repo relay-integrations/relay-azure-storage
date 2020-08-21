@@ -4,11 +4,11 @@ Integration with Azure Storage for Puppet Relay.
 
 ## Actions
 
-The following are supported actions: 
+The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [azure-storage-step-storageaccount-list](/steps/azure-storage-step-storageaccount-list)  | 
+| Step      | [azure-storage-step-account-list](/steps/azure-storage-step-account-list)  | 
 
 
 ## Contributing

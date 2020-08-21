@@ -1,4 +1,4 @@
-# azure-storage-step-storageaccount-list
+# azure-storage-step-account-list
 
 This [Azure](https://azure.microsoft.com/en-us/services/storage/) step container lists the accounts
 in an Azure subscription or resource group and sets an output, `storageAccounts`, to an array of storage account objects.
@@ -9,7 +9,7 @@ in an Azure subscription or resource group and sets an output, `storageAccounts`
 |---------|---------------|-----------|-------------|---------|----------|
 | `azure` || mapping | A mapping of Azure account configuration. | None | True |
 || `connection` | Azure Connection | Connection for the Azure account. Use the Connection sidebar to configure the Azure Connection | None | True |
-| `resourceGroup` || string | Resource group to look up Storage Accounts under | None | False | 
+| `resourceGroup` || string | Resource group to look up Storage Accounts under | None | False |
 
 ## Outputs
 
@@ -23,11 +23,11 @@ in an Azure subscription or resource group and sets an output, `storageAccounts`
 steps:
 # ...
 - name: azure-storage-list-accounts
-  image: relaysh/azure-storage-step-storageaccount-list
+  image: relaysh/azure-storage-step-account-list
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }
-    resourceGroup: 'my_resource_group' 
+    resourceGroup: 'my_resource_group'
 ```
 
 ## Example output `storageAccounts`
@@ -89,4 +89,3 @@ steps:
    }
 ]
 ```
-
