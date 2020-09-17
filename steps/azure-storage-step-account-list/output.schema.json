@@ -1,0 +1,18 @@
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "storageAccounts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "List of Azure Storage Accounts and metadata."
+    }
+  },
+  "required": [
+    "storageAccounts"
+  ],
+  "additionalProperties": false
+}

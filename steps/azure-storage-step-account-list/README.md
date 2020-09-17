@@ -3,20 +3,6 @@
 This [Azure](https://azure.microsoft.com/en-us/services/storage/) step container lists the accounts
 in an Azure subscription or resource group and sets an output, `storageAccounts`, to an array of storage account objects.
 
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `azure` || mapping | A mapping of Azure account configuration. | None | True |
-|| `connection` | Azure Connection | Connection for the Azure account. Use the Connection sidebar to configure the Azure Connection | None | True |
-| `resourceGroup` || string | Resource group to look up Storage Accounts under | None | False |
-
-## Outputs
-
-| Name | Data type | Description |
-|------|-----------|-------------|
-| `storageAccounts` | array of Azure Storage Accounts | List of Azure Storage Accounts and metadata. |
-
 ## Example
 
 ```yaml

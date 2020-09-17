@@ -1,0 +1,53 @@
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "azure": {
+      "type": "object",
+      "description": "A mapping of Azure account configuration.",
+      "properties": {
+        "connection": {
+          "type": "object",
+          "x-relay-connectionType": "azure",
+          "description": "A Relay Azure connection to use",
+          "properties": {
+            "subscriptionID": {
+              "type": "string",
+              "description": "Azure Subscription ID"
+            },
+            "clientID": {
+              "type": "string",
+              "description": "Azure Service Principal client ID"
+            },
+            "tenantID": {
+              "type": "string",
+              "description": "Azure Service Principal tenant ID"
+            },
+            "secret": {
+              "type": "string",
+              "description": "Azure Service Principal secret"
+            }
+          },
+          "required": [
+            "subscriptionID", 
+            "clientID",
+            "tenantID",
+            "secret"
+          ]
+        }
+      },
+      "required": [
+        "connection"
+      ]
+    },
+    "resourceGroup": {
+      "type": "string",
+      "description": "Resource group to look up Storage Accounts under"
+    }
+  },
+  "required": [
+    "azure"
+  ],
+  "additionalProperties": false
+}
