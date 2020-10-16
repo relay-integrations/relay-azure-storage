@@ -3,18 +3,6 @@
 This [Azure](https://azure.microsoft.com/en-us/services/storage/) step container lists the accounts
 in an Azure subscription or resource group and sets an output, `storageAccounts`, to an array of storage account objects.
 
-## Example
-
-```yaml
-steps:
-# ...
-- name: azure-storage-list-accounts
-  image: relaysh/azure-storage-step-account-list
-  spec:
-    azure:
-      connection: !Connection { type: azure, name: my-azure-account }
-    resourceGroup: 'my_resource_group'
-```
 
 ## Example output `storageAccounts`
 
