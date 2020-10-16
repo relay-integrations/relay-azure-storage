@@ -20,3 +20,15 @@ schemas:
   output:
     source: file
     file: output.schema.json
+
+examples:
+- summary: List storage accounts
+  content:
+    apiVersion: v1
+    kind: Step
+    name: azure-storage-list-accounts
+    image: relaysh/azure-storage-step-account-list
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      resourceGroup: !Parameter resourceGroup
