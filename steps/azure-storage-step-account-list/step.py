@@ -1,15 +1,18 @@
 #!/usr/bin/env python
 
-from azure.common.credentials import ServicePrincipalCredentials
+from azure.identity import ClientSecretCredential
 from azure.mgmt.storage import StorageManagementClient
 from relay_sdk import Interface, Dynamic as D
+import logging
+
+logging.basicConfig(level=logging.WARNING)
 
 relay = Interface()
 
-credentials = ServicePrincipalCredentials(
+credentials = ClientSecretCredential(
     client_id=relay.get(D.azure.connection.clientID),
-    secret=relay.get(D.azure.connection.secret),
-    tenant=relay.get(D.azure.connection.tenantID)
+    client_secret=relay.get(D.azure.connection.secret),
+    tenant_id=relay.get(D.azure.connection.tenantID)
 )
 subscription_id=relay.get(D.azure.connection.subscriptionID)
 storage_client = StorageManagementClient(credentials, subscription_id)
